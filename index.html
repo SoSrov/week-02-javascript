@@ -1,34 +1,52 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Week 02 JS</title>
 
-        <script>
-            // `var` is old - use `let` instead
-            var currentWeather = 'Beautiful and sunny!';
-            let dogsName = 'Hatrick';
-            const isWeek02 = true;
-            const isWeek01 = false;
+<head>
+    <title>Week 02 JS</title>
 
-            let dogsAge = '11';
-            let dogsAgeAsNumber = parseInt(dogsAge);
+    <script>
+        // `var` is old - use `let` instead
+        var currentWeather = 'Beautiful and sunny!';
+        let dogsName = 'Hatrick';
+        const isWeek02 = true;
+        const isWeek01 = false;
 
-            function getHumanAge (dogsAge) {
-                return parseInt(dogsAge) * 7;
+        let dogsAge = '11';
+        let dogsAgeAsNumber = parseInt(dogsAge);
+
+        function getHumanAge(dogsAge) {
+            let result = parseInt(dogsAge) * 7;
+
+            // if the dogsAge was 0 then the result is also 0
+            // then we want to return 'A puppy less than 1'
+            // condition / predicate 
+            // other ways to check conditions: < > <= >= == === != !==
+            if (result == 0) {
+                // code here runs when condition above is met
+                result = 'A puppy less than 1 year';
             }
 
-            let humanAge1 = getHumanAge(dogsAge);
-            let humanAge2 = getHumanAge(23);
-            let humanAge3 = getHumanAge(12);
+            return result;
+        }
 
-            console.log({humanAge1, humanAge2, humanAge3});             
+        // let humanAge1 = getHumanAge(dogsAge);
+        // let humanAge2 = getHumanAge(23);
+        // let humanAge3 = getHumanAge(12);
+        // let humanAge4 = getHumanAge(0);
 
-        </script>
+        // store all of the ages in an Array (aka the list)
+        let humanAges = [];
+        humanAges.push(getHumanAge(dogsAge));
+        humanAges.push(getHumanage(23))
 
-    </head>
+        console.log({ humanAges });
 
-    <body>
-        Congrats on getting to week 02!
-    </body>
+    </script>
+
+</head>
+
+<body>
+    Congrats on getting to week 02!
+</body>
 
 </html>
